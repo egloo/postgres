@@ -193,8 +193,8 @@ RUN apt-get update \
            postgis=$POSTGIS_VERSION \
       && rm -rf /var/lib/apt/lists/*
 
-COPY ./initdb-postgis.sh /docker-entrypoint-initdb.d/postgis.sh
-COPY ./update-postgis.sh /usr/local/bin
+COPY initdb-postgis.sh /docker-entrypoint-initdb.d/postgis.sh
+COPY update-postgis.sh /usr/local/bin
 
 ENTRYPOINT ["docker-entrypoint.sh"]
 
